@@ -1,0 +1,46 @@
+<%- model_class = Volunteer -%>
+<!-- <div class="page-header">
+  <h1>Website Application</h1>
+</div>
+ --><p id="volunteer_website_application_intro">Once you submit your completed application, we will process you forms and contact you.</p>
+<%= simple_form_for @volunteer, :url => '/volunteers/create_website_application', :html => { :id => 'volunteer_website_application', :class => 'form-horizontal' } do |f| %>
+	<div id="your_information" class="website_application_box"> 
+      <h2>Your Information</h2>
+      <%= f.input :title %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :address_1 %>
+      <%= f.input :address_2 %>
+      <%= f.input :city %>
+      <%= f.input :county %>
+      <%= f.input :state %>
+      <%= f.input :country %>
+      <%= f.input :zip_code %>
+      <%= f.input :date_of_birth, :order => [:day, :month, :year], :start_year => 1930, :end_year => 2013 %>
+      <%= f.input :occupation %>
+      <%= f.input :occupation_main_duties %>
+      <%= f.input :phone_number_1 %>
+      <%= f.input :phone_type_1 %>
+      <%= f.input :phone_number_2 %>
+      <%= f.input :phone_type_2 %>
+      <%= f.input :email %>
+    </div>
+	<div id="emergency_contact" class="website_application_box"> 
+      <h2>Emergency Contact Information</h2>
+      <%= f.input :emergency_contact_name %>
+      <%= f.input :emergency_contact_relationship %>
+      <%= f.input :emergency_contact_phone_number %>
+  	</div>
+    <div id="misc" class="website_application_box">
+      <h2>Miscellaneous Details</h2>
+      <%= f.input :application_notes_talents, :label => "What specifc talents/assets can you bring to Traffick911?" %>
+      <%= f.input :application_notes_languages, :label => "Do you speak any other languages?  If so, which ones?"  %>
+      <%= f.input :application_notes_passion, :label => "What is your passion?"  %>
+      <%= f.input :application_notes_gain, :label => "What do you expect to gain from your volunteer experience?"  %>
+  	</div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Submit Application", :class => 'btn btn-primary', :id => 'website_application_submit_button' %>
+  </div>
+<% end %>
+

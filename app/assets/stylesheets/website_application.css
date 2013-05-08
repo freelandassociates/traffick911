@@ -1,0 +1,81 @@
+#volunteer_website_application .website_application_box {
+	border: solid 1px lightgray;
+	width: 500px;
+	padding: 20px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#volunteer_website_application_intro {
+	font-size: 13px;
+	margin-left: 10px;
+}
+
+#volunteer_website_application label {
+	font-size: 12px;
+	width: 560px;
+	text-align: left;
+	margin-left: 0px;
+}
+
+#volunteer_website_application h2 {
+	font-size: 18px;
+	color: #F92A19;
+	margin-top: -42px;
+	padding-left: 5px;
+	background-color: white;
+	/*display: inline-block;*/
+}
+
+#volunteer_website_application span.error {
+	margin-left: 5px;
+	font-size: 12px;
+}
+
+div #your_information h2 {
+	width: 150px;
+}
+
+div #emergency_contact h2 {
+	width: 280px;
+}
+
+div #misc h2 {
+	width: 195px;
+}
+
+
+#volunteer_website_application input {
+	font-size: 12px;
+	height: 16px;
+}
+
+#volunteer_website_application input.btn {
+	font-size: 16px;
+	height: 30px;
+}
+
+
+
+#volunteer_website_application select{
+	font-size: 12px;
+	height: 24px;
+}
+
+#volunteer_website_application textarea {
+    font-size: 12px;	
+	height: 150px;
+	width: 480px;
+}
+
+#volunteer_website_application #volunteer_date_of_birth_1i {
+	width: 70px;
+}
+
+#volunteer_website_application #volunteer_date_of_birth_2i {
+	width: 90px;
+}
+
+#volunteer_website_application #volunteer_date_of_birth_3i {
+	width: 50px;
+}

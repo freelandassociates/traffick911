@@ -1,0 +1,107 @@
+<%- model_class = Volunteer -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table id="volunteergrid">
+  <thead>
+    <tr>
+      <th data-field="actions"><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th data-field="id"><%= model_class.human_attribute_name(:id) %></th>
+      <th data-field="title"><%= model_class.human_attribute_name(:title) %></th>
+      <th data-field="first_name"><%= model_class.human_attribute_name(:first_name) %></th>
+      <th data-field="last_name"><%= model_class.human_attribute_name(:last_name) %></th>
+      <th data-field="address_1"><%= model_class.human_attribute_name(:address_1) %></th>
+      <th data-field="address_2"><%= model_class.human_attribute_name(:address_2) %></th>
+      <th data-field="city"><%= model_class.human_attribute_name(:city) %></th>
+      <th data-field="county"><%= model_class.human_attribute_name(:county) %></th>
+      <th data-field="state"><%= model_class.human_attribute_name(:state) %></th>
+      <th data-field="country"><%= model_class.human_attribute_name(:country) %></th>
+      <th data-field="zip_code"><%= model_class.human_attribute_name(:zip_code) %></th>
+      <th data-field="date_of_birth"><%= model_class.human_attribute_name(:date_of_birth) %></th>
+      <th data-field="phone_number_1"><%= model_class.human_attribute_name(:phone_number_1) %></th>
+      <th data-field="phone_type_1"><%= model_class.human_attribute_name(:phone_type_1) %></th>
+      <th data-field="phone_number_2"><%= model_class.human_attribute_name(:phone_number_2) %></th>
+      <th data-field="phone_type_2"><%= model_class.human_attribute_name(:phone_type_2) %></th>
+      <th data-field="email"><%= model_class.human_attribute_name(:email) %></th>
+      <th data-field="emergency_contact_name"><%= model_class.human_attribute_name(:emergency_contact_name) %></th>
+      <th data-field="emergency_contact_relationship"><%= model_class.human_attribute_name(:emergency_contact_relationship) %></th>
+      <th data-field="emergency_contact_phone_number"><%= model_class.human_attribute_name(:emergency_contact_phone_number) %></th>
+      <th data-field="occupation"><%= model_class.human_attribute_name(:occupation) %></th>
+      <th data-field="occupation_main_duties"><%= model_class.human_attribute_name(:occupation_main_duties) %></th>
+      <th data-field="application_notes_talents"><%= model_class.human_attribute_name(:application_notes_talents) %></th>
+      <th data-field="application_notes_languages"><%= model_class.human_attribute_name(:application_notes_languages) %></th>
+      <th data-field="application_notes_passion"><%= model_class.human_attribute_name(:application_notes_passion) %></th>
+      <th data-field="application_notes_gain"><%= model_class.human_attribute_name(:application_notes_gain) %></th>
+      <th data-field="love_outreach"><%= model_class.human_attribute_name(:love_outreach) %></th>
+      <th data-field="official_volunteer"><%= model_class.human_attribute_name(:official_volunteer) %></th>
+      <th data-field="interest_email_answered"><%= model_class.human_attribute_name(:interest_email_answered) %></th>
+      <th data-field="orientation_date"><%= model_class.human_attribute_name(:orientation_date) %></th>
+      <th data-field="orientation_location"><%= model_class.human_attribute_name(:orientation_location) %></th>
+      <th data-field="orientation_presenter"><%= model_class.human_attribute_name(:orientation_presenter) %></th>
+      <th data-field="application_form_received"><%= model_class.human_attribute_name(:application_form_received) %></th>
+      <th data-field="background_check"><%= model_class.human_attribute_name(:background_check) %></th>
+      <th data-field="letters_of_recommendation"><%= model_class.human_attribute_name(:letters_of_recommendation) %></th>
+      <th data-field="waiver"><%= model_class.human_attribute_name(:waiver) %></th>
+      <th data-field="notes"><%= model_class.human_attribute_name(:notes) %></th>
+      <th data-field="created_at"><%= model_class.human_attribute_name(:created_at) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @volunteers.each do |volunteer| %>
+      <tr>
+        <td>
+          <%= link_to "View", volunteer_path(volunteer), :class => 'btn btn-mini'  %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_volunteer_path(volunteer), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      volunteer_path(volunteer),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+        <td><%= volunteer.id %></td>
+        <td><%= volunteer.title %></td>
+        <td><%= volunteer.first_name %></td>
+        <td><%= volunteer.last_name %></td>
+        <td><%= volunteer.address_1 %></td>
+        <td><%= volunteer.address_2 %></td>
+        <td><%= volunteer.city %></td>
+        <td><%= volunteer.county %></td>
+        <td><%= volunteer.state %></td>
+        <td><%= volunteer.country %></td>
+        <td><%= volunteer.zip_code %></td>
+        <td><%= volunteer.date_of_birth %></td>
+        <td><%= volunteer.phone_number_1 %></td>
+        <td><%= volunteer.phone_type_1 %></td>
+        <td><%= volunteer.phone_number_2 %></td>
+        <td><%= volunteer.phone_type_2 %></td>
+        <td><%= volunteer.email %></td>
+        <td><%= volunteer.emergency_contact_name %></td>
+        <td><%= volunteer.emergency_contact_relationship %></td>
+        <td><%= volunteer.emergency_contact_phone_number %></td>
+        <td><%= volunteer.occupation %></td>
+        <td><%= volunteer.occupation_main_duties %></td>
+        <td><%= volunteer.application_notes_talents %></td>
+        <td><%= volunteer.application_notes_languages %></td>
+        <td><%= volunteer.application_notes_passion %></td>
+        <td><%= volunteer.application_notes_gain %></td>
+        <td><%= volunteer.love_outreach %></td>
+        <td><%= volunteer.official_volunteer %></td>
+        <td><%= volunteer.interest_email_answered %></td>
+        <td><%= volunteer.orientation_date %></td>
+        <td><%= volunteer.orientation_location %></td>
+        <td><%= volunteer.orientation_presenter %></td>
+        <td><%= volunteer.application_form_received %></td>
+        <td><%= volunteer.background_check %></td>
+        <td><%= volunteer.letters_of_recommendation %></td>
+        <td><%= volunteer.waiver %></td>
+        <td><%= volunteer.notes %></td>
+        <td><%=l volunteer.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_volunteer_path,
+            :class => 'btn btn-primary' %>
