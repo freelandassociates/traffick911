@@ -1,13 +1,13 @@
 #volunteer_website_application .website_application_box {
 	border: solid 1px lightgray;
-	width: 500px;
+	width: 460px;
 	padding: 20px;
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
 
 #volunteer_website_application_intro {
-	font-size: 13px;
+	font-size: 12px;
 	margin-left: 10px;
 }
 
@@ -65,7 +65,7 @@ div #misc h2 {
 #volunteer_website_application textarea {
     font-size: 12px;	
 	height: 150px;
-	width: 480px;
+	width: 443px;
 }
 
 #volunteer_website_application #volunteer_date_of_birth_1i {
@@ -78,4 +78,15 @@ div #misc h2 {
 
 #volunteer_website_application #volunteer_date_of_birth_3i {
 	width: 50px;
+}
+
+#volunteer_website_application div.form-actions {
+	width: 450px;
+	padding-top: 0px;
+	padding-left: 50px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	background-color: white;
+	border-top: none;
+
 }
