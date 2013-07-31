@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<% if request.fullpath != '/volunteers/website_application' && request.fullpath != '/home/welcome_new_volunteer' %>  
+<% if request.fullpath != '/volunteers/website_application' && request.fullpath != '/volunteers/create_website_application' && request.fullpath != '/home/welcome_new_volunteer' %>  
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
       <div class="container-fluid">
@@ -41,7 +41,7 @@
     <!-- <p class="alert"><%= alert %></p> -->
   </div>
 
-  <% if request.fullpath != '/volunteers/website_application' && request.fullpath != '/home/welcome_new_volunteer' %> 
+  <% if request.fullpath != '/volunteers/website_application' && request.fullpath != '/volunteers/create_website_application' && request.fullpath != '/home/welcome_new_volunteer' %> 
     <div id="user_nav">
       <% if user_signed_in? %>
         Logged in as <strong><%= current_user.email %></strong>.
