@@ -30,6 +30,8 @@ group :assets do
   gem 'kendoui-rails'
 end
 
+gem 'devise'
+
 gem 'jquery-rails'
 
 gem 'simple_form'

@@ -1,7 +1,13 @@
 Traffick911::Application.routes.draw do
   
+  devise_for :users
+
+  root :to => "home#index"
+
   get "volunteers/website_application"
   post "volunteers/create_website_application"
+
+  get "/home/welcome_new_volunteer"
 
   resources :volunteers
 
