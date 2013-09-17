@@ -11,6 +11,10 @@ gem 'thin'
 
 gem 'newrelic_rpm'
 
+group :development do
+  gem 'pry'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -32,6 +36,8 @@ group :assets do
 end
 
 gem 'devise'
+
+gem 'cancan'
 
 gem 'jquery-rails'
 

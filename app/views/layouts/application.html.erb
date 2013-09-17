@@ -35,9 +35,19 @@
 <div class="container-fluid">
 
   <div>
-    <p class="notice"><%= notice %></p>
+    <!-- <p class="notice"><%= notice %></p> -->
     <!-- <p class="alert"><%= alert %></p> -->
+    <% if !flash.empty? %>
+      <div id="flash">
+        <% flash.keys.each do |k| %>
+          <div class="<%= k %>">
+            <%= flash[k] %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
+
 
   <% if request.fullpath != '/volunteers/website_application' && request.fullpath != '/volunteers/create_website_application' && request.fullpath != '/home/welcome_new_volunteer' %> 
     <div id="user_nav">

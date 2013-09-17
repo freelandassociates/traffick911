@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Id</Data></Cell>
+        <Cell><Data ss:Type="String">Title</Data></Cell>
+        <Cell><Data ss:Type="String">First Name</Data></Cell>
+        <Cell><Data ss:Type="String">Last Name</Data></Cell>
+        <Cell><Data ss:Type="String">Address 1</Data></Cell>
+        <Cell><Data ss:Type="String">Address 2</Data></Cell>
+        <Cell><Data ss:Type="String">City</Data></Cell>
+        <Cell><Data ss:Type="String">County</Data></Cell>
+        <Cell><Data ss:Type="String">State</Data></Cell>
+        <Cell><Data ss:Type="String">Country</Data></Cell>
+        <Cell><Data ss:Type="String">Zip Code</Data></Cell>
+        <Cell><Data ss:Type="String">Date of Birth</Data></Cell>
+        <Cell><Data ss:Type="String">Phone Number 1</Data></Cell>
+        <Cell><Data ss:Type="String">Phone Type 1</Data></Cell>
+        <Cell><Data ss:Type="String">Phone Number 2</Data></Cell>
+        <Cell><Data ss:Type="String">Phone Type 2</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Emergency Contact Name</Data></Cell>
+        <Cell><Data ss:Type="String">Emergency Contact Relationship</Data></Cell>
+        <Cell><Data ss:Type="String">Emergency Contact Phone Number</Data></Cell>
+        <Cell><Data ss:Type="String">Occupation</Data></Cell>
+        <Cell><Data ss:Type="String">Occupation Main Duties</Data></Cell>
+        <Cell><Data ss:Type="String">Application Notes Talents</Data></Cell>
+        <Cell><Data ss:Type="String">Application Notes Languages</Data></Cell>
+        <Cell><Data ss:Type="String">Application Notes Passion</Data></Cell>
+        <Cell><Data ss:Type="String">Application Notes Gain</Data></Cell>
+        <Cell><Data ss:Type="String">Love Outreach</Data></Cell>
+        <Cell><Data ss:Type="String">Official Volunteer</Data></Cell>
+        <Cell><Data ss:Type="String">Interest Email Answered</Data></Cell>
+        <Cell><Data ss:Type="String">Orientation Date</Data></Cell>
+        <Cell><Data ss:Type="String">Orientation Location</Data></Cell>
+        <Cell><Data ss:Type="String">Orientation Presenter</Data></Cell>
+        <Cell><Data ss:Type="String">Application Form Received</Data></Cell>
+        <Cell><Data ss:Type="String">Background Check</Data></Cell>
+        <Cell><Data ss:Type="String">Letters Of Recommendation</Data></Cell>
+        <Cell><Data ss:Type="String">Waiver</Data></Cell>
+        <Cell><Data ss:Type="String">Notes</Data></Cell>
+        <Cell><Data ss:Type="String">Created At</Data></Cell>
+        <Cell><Data ss:Type="String">Updated At</Data></Cell>
+      </Row>
+    <% @volunteers.each do |volunteer| %>
+      <Row>
+          <Cell><Data ss:Type="Number"><%= volunteer.id %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.title %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.first_name %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.last_name %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.address_1 %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.address_2 %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.city %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.county %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.state %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.country %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.zip_code %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.date_of_birth %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.phone_number_1 %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.phone_type_1 %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.phone_number_2 %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.phone_type_2 %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.email %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.emergency_contact_name %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.emergency_contact_relationship %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.emergency_contact_phone_number %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.occupation %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.occupation_main_duties %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.application_notes_talents %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.application_notes_languages %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.application_notes_passion %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.application_notes_gain %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.love_outreach %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.official_volunteer %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.interest_email_answered %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.orientation_date %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.orientation_location %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.orientation_presenter %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.application_form_received %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.background_check %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.letters_of_recommendation %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.waiver %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.notes %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.created_at %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= volunteer.updated_at %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

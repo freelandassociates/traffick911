@@ -1,19 +1,25 @@
 class VolunteersController < ApplicationController
+  
+  load_and_authorize_resource
+
   # GET /volunteers
   # GET /volunteers.json
   def index
-    @volunteers = Volunteer.all
+    # @volunteers = Volunteer.all
+    @volunteers = Volunteer.order(:id)
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @volunteers }
+      format.csv { send_data @volunteers.to_csv }
+      format.xls 
     end
   end
 
   # GET /volunteers/1
   # GET /volunteers/1.json
   def show
-    @volunteer = Volunteer.find(params[:id])
+    # @volunteer = Volunteer.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +30,7 @@ class VolunteersController < ApplicationController
   # GET /volunteers/new
   # GET /volunteers/new.json
   def new
-    @volunteer = Volunteer.new
+    # @volunteer = Volunteer.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +40,13 @@ class VolunteersController < ApplicationController
 
   # GET /volunteers/1/edit
   def edit
-    @volunteer = Volunteer.find(params[:id])
+    # @volunteer = Volunteer.find(params[:id])
   end
 
   # POST /volunteers
   # POST /volunteers.json
   def create
-    @volunteer = Volunteer.new(params[:volunteer])
+    # @volunteer = Volunteer.new(params[:volunteer])
 
     respond_to do |format|
       if @volunteer.save
@@ -56,7 +62,7 @@ class VolunteersController < ApplicationController
   # PUT /volunteers/1
   # PUT /volunteers/1.json
   def update
-    @volunteer = Volunteer.find(params[:id])
+    # @volunteer = Volunteer.find(params[:id])
 
     respond_to do |format|
       if @volunteer.update_attributes(params[:volunteer])
@@ -72,7 +78,7 @@ class VolunteersController < ApplicationController
   # DELETE /volunteers/1
   # DELETE /volunteers/1.json
   def destroy
-    @volunteer = Volunteer.find(params[:id])
+    # @volunteer = Volunteer.find(params[:id])
     @volunteer.destroy
 
     respond_to do |format|

@@ -18,4 +18,15 @@ class Volunteer < ActiveRecord::Base
 							:zip_code
 
   attr_accessible :address_1, :address_2, :application_form_received, :application_notes_gain, :application_notes_languages, :application_notes_passion, :application_notes_talents, :background_check, :city, :country, :county, :date_of_birth, :email, :emergency_contact_name, :emergency_contact_phone_number, :emergency_contact_relationship, :first_name, :interest_email_answered, :last_name, :letters_of_recommendation, :love_outreach, :notes, :occupation, :occupation_main_duties, :official_volunteer, :orientation_date, :orientation_location, :orientation_presenter, :phone_number_1, :phone_number_2, :phone_type_1, :phone_type_2, :state, :title, :waiver, :zip_code
+
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |volunteer|
+        csv << volunteer.attributes.values_at(*column_names)
+      end
+    end
+  end
+
+
 end
