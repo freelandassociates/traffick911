@@ -3,80 +3,129 @@
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @volunteer.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
-  <dd><%= @volunteer.first_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
-  <dd><%= @volunteer.last_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:address_1) %>:</strong></dt>
-  <dd><%= @volunteer.address_1 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:address_2) %>:</strong></dt>
-  <dd><%= @volunteer.address_2 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
-  <dd><%= @volunteer.city %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:county) %>:</strong></dt>
-  <dd><%= @volunteer.county %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
-  <dd><%= @volunteer.state %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:country) %>:</strong></dt>
-  <dd><%= @volunteer.country %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:zip_code) %>:</strong></dt>
-  <dd><%= @volunteer.zip_code %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:date_of_birth) %>:</strong></dt>
-  <dd><%= @volunteer.date_of_birth %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:phone_number_1) %>:</strong></dt>
-  <dd><%= @volunteer.phone_number_1 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:phone_type_1) %>:</strong></dt>
-  <dd><%= @volunteer.phone_type_1 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:phone_number_2) %>:</strong></dt>
-  <dd><%= @volunteer.phone_number_2 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:phone_type_2) %>:</strong></dt>
-  <dd><%= @volunteer.phone_type_2 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
-  <dd><%= @volunteer.email %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:emergency_contact_name) %>:</strong></dt>
-  <dd><%= @volunteer.emergency_contact_name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:emergency_contact_relationship) %>:</strong></dt>
-  <dd><%= @volunteer.emergency_contact_relationship %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:emergency_contact_phone_number) %>:</strong></dt>
-  <dd><%= @volunteer.emergency_contact_phone_number %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:occupation) %>:</strong></dt>
-  <dd><%= @volunteer.occupation %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:occupation_main_duties) %>:</strong></dt>
-  <dd><%= @volunteer.occupation_main_duties %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:application_notes_talents) %>:</strong></dt>
-  <dd><%= @volunteer.application_notes_talents %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:application_notes_languages) %>:</strong></dt>
-  <dd><%= @volunteer.application_notes_languages %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:application_notes_passion) %>:</strong></dt>
-  <dd><%= @volunteer.application_notes_passion %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:application_notes_gain) %>:</strong></dt>
-  <dd><%= @volunteer.application_notes_gain %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:love_outreach) %>:</strong></dt>
-  <dd><%= @volunteer.love_outreach %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:official_volunteer) %>:</strong></dt>
-  <dd><%= @volunteer.official_volunteer %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:interest_email_answered) %>:</strong></dt>
-  <dd><%= @volunteer.interest_email_answered %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:orientation_date) %>:</strong></dt>
-  <dd><%= @volunteer.orientation_date %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:orientation_location) %>:</strong></dt>
-  <dd><%= @volunteer.orientation_location %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:orientation_presenter) %>:</strong></dt>
-  <dd><%= @volunteer.orientation_presenter %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:application_form_received) %>:</strong></dt>
-  <dd><%= @volunteer.application_form_received %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:background_check) %>:</strong></dt>
-  <dd><%= @volunteer.background_check %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:letters_of_recommendation) %>:</strong></dt>
-  <dd><%= @volunteer.letters_of_recommendation %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:waiver) %>:</strong></dt>
-  <dd><%= @volunteer.waiver %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:notes) %>:</strong></dt>
-  <dd><%= @volunteer.notes %></dd>
-</dl>
+
+        <div id="example" class="k-content">
+            <div id="forecast">
+                <div id="tabstrip">
+                    <ul>
+                        <li class="k-state-active">
+                            Name and Address
+                        </li>
+                        <li>
+                            Phone Contacts
+                        </li>
+                        <li>
+                            Application Details
+                        </li>
+                        <li>
+                            Application Progress
+                        </li>
+                        <li>
+                            Notes
+                        </li>
+                    </ul>
+                    <div>
+                      <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
+                      <dd><%= @volunteer.title %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
+                      <dd><%= @volunteer.first_name %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
+                      <dd><%= @volunteer.last_name %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:address_1) %>:</strong></dt>
+                      <dd><%= @volunteer.address_1 %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:address_2) %>:</strong></dt>
+                      <dd><%= @volunteer.address_2 %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
+                      <dd><%= @volunteer.city %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:county) %>:</strong></dt>
+                      <dd><%= @volunteer.county %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
+                      <dd><%= @volunteer.state %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:country) %>:</strong></dt>
+                      <dd><%= @volunteer.country %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:zip_code) %>:</strong></dt>
+                      <dd><%= @volunteer.zip_code %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:date_of_birth) %>:</strong></dt>
+                      <dd><%= @volunteer.date_of_birth %></dd>
+                    </div>
+                    <div>
+                      <dt><strong><%= model_class.human_attribute_name(:phone_number_1) %>:</strong></dt>
+                      <dd><%= @volunteer.phone_number_1 %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:phone_type_1) %>:</strong></dt>
+                      <dd><%= @volunteer.phone_type_1 %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:phone_number_2) %>:</strong></dt>
+                      <dd><%= @volunteer.phone_number_2 %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:phone_type_2) %>:</strong></dt>
+                      <dd><%= @volunteer.phone_type_2 %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+                      <dd><%= @volunteer.email %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:emergency_contact_name) %>:</strong></dt>
+                      <dd><%= @volunteer.emergency_contact_name %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:emergency_contact_relationship) %>:</strong></dt>
+                      <dd><%= @volunteer.emergency_contact_relationship %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:emergency_contact_phone_number) %>:</strong></dt>
+                      <dd><%= @volunteer.emergency_contact_phone_number %></dd>
+                    </div>
+                    <div>
+                      <dt><strong><%= model_class.human_attribute_name(:occupation) %>:</strong></dt>
+                      <dd><%= @volunteer.occupation %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:occupation_main_duties) %>:</strong></dt>
+                      <dd><%= @volunteer.occupation_main_duties %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:application_notes_talents) %>:</strong></dt>
+                      <dd><%= @volunteer.application_notes_talents %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:application_notes_languages) %>:</strong></dt>
+                      <dd><%= @volunteer.application_notes_languages %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:application_notes_passion) %>:</strong></dt>
+                      <dd><%= @volunteer.application_notes_passion %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:application_notes_gain) %>:</strong></dt>
+                    </div>
+                    <div>
+                      <dd><%= @volunteer.application_notes_gain %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:love_outreach) %>:</strong></dt>
+                      <dd><%= @volunteer.love_outreach %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:official_volunteer) %>:</strong></dt>
+                      <dd><%= @volunteer.official_volunteer %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:interest_email_answered) %>:</strong></dt>
+                      <dd><%= @volunteer.interest_email_answered %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:orientation_date) %>:</strong></dt>
+                      <dd><%= @volunteer.orientation_date %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:orientation_location) %>:</strong></dt>
+                      <dd><%= @volunteer.orientation_location %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:orientation_presenter) %>:</strong></dt>
+                      <dd><%= @volunteer.orientation_presenter %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:application_form_received) %>:</strong></dt>
+                      <dd><%= @volunteer.application_form_received %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:background_check) %>:</strong></dt>
+                      <dd><%= @volunteer.background_check %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:letters_of_recommendation) %>:</strong></dt>
+                      <dd><%= @volunteer.letters_of_recommendation %></dd>
+                      <dt><strong><%= model_class.human_attribute_name(:waiver) %>:</strong></dt>
+                      <dd><%= @volunteer.waiver %></dd>
+                    </div>
+                    <div>
+                      <dt><strong><%= model_class.human_attribute_name(:notes) %>:</strong></dt>
+                      <dd><%= @volunteer.notes %></dd>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function() {
+                    $("#tabstrip").kendoTabStrip({
+                        animation:  {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+                });
+            </script>
+
+
+
+<!-- 
+<dl class="dl-horizontal"> 
+</dl> -->
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
