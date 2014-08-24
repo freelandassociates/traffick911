@@ -102,6 +102,8 @@ class VolunteersController < ApplicationController
 
     respond_to do |format|
       if @volunteer.save
+        # Send email notification..
+        VolunteerMailer.new_volunteer(@volunteer).deliver
         # format.html { redirect_to @volunteer, notice: 'Volunteer was successfully created.' }
         format.html { redirect_to '/home/welcome_new_volunteer' }
         format.json { render json: @volunteer, status: :created, location: @volunteer }

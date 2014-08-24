@@ -49,7 +49,20 @@ Traffick911::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
+
+  # Configure mail delivery methods
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.mandrillapp.com",
+    :port => 587,
+    :domain => "freelandassociates.com",
+    :authentication => :login,
+    user_name: "paul.simpsonparry@freelandassociates.com",
+    password: "la3Q5WyeRCIqgGScWM22yA"
+  }
 
   # Enable threaded mode
   # config.threadsafe!
