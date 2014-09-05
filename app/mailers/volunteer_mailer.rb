@@ -9,7 +9,7 @@ class VolunteerMailer < ActionMailer::Base
   def new_volunteer(volunteer)
     @volunteer = volunteer 
 
-    mail to: "volunteer@traffick911.com", bcc: "paul.simpsonparry@freelandassociates.com", subject: "New Volunteer Website Signup"
-    # mail to: "paulsimpsonparry@gmail.com", cc: "paul.simpsonparry@freelandassociates.com", subject: "New Volunteer Website Signup"
+    mail to: "volunteer@traffick911.com", subject: "New Volunteer Website Signup"
+    # mail to: "volunteer@traffick911.com", bcc: "paul.simpsonparry@freelandassociates.com", subject: "New Volunteer Website Signup"
   end
 end
